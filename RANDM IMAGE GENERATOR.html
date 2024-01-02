@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <style>
+        html{
+            background-color: rgb(187, 227, 9);
+
+        }
+
+        .give{
+            border: 5px solid white;
+            top:80%;
+            left: 500px;
+            position:absolute;
+font-size: 2.0rem;
+    }
+
+
+    #innerContainer{
+        border:7px solid white;
+        top:80px;
+            left: 500px;
+            position:absolute;
+    }
+    .jave{
+        width:300px;
+        height:300px;
+        border:8px solid red;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="innerContainer">
+            <img id="images" class="jave"/>
+        </div>
+    </div>
+
+    
+
+   
+    <div id="buttonContainer"> 
+        <button onclick="kinitak()" class="give">click</button>
+    </div>
+
+</body>
+
+<script>
+
+const bucketImages=[
+    'nov.jpg',
+    'pan.jpg',
+    'namj.jpg',
+    'food.jpg',
+    'pko.jpg',
+    'build1.jpg',
+    'build2.jpg',
+    'turk.jpg',
+    'food.jpg',
+    'wife1.jpg',
+    'wife2.jpg',
+
+    'wife3.jpg',
+    'wife4.jpg',
+    'food.jpg',
+    'mine.jpg',
+    'lin.jpg',
+    'infin.jpg',
+    'food.jpg',
+
+    'car1.jpg',
+    'car2.jpg',
+    'car3.jpg',
+    'car4.jpg',
+    'car5.jpg',
+    'car6.jpg',
+
+
+]
+
+    function kinitak(){
+
+    const randov=Math.floor(Math.random()* bucketImages.length)
+
+    const selected=bucketImages[randov]
+
+//display images
+document.getElementById('images').src=`./ima/${selected}`
+
+}
+</script>
+
+</html>
